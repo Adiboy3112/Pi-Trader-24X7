@@ -1,4 +1,4 @@
-from datetime import timezone
+from pytz import timezone
 import traceback
 import alpaca_trade_api as tradeapi
 import tools
@@ -50,6 +50,7 @@ def main():
 def trading_strategy_1(api, stock):
     account = api.get_account()
     currently_own_this_stock = tools.currently_own_this_stock(api, stock)
+    api.submit_order(symbol="AMD",qty="1",side="buy",type="market",time_in_force="day")
 
 
 def parse_var(f="keys.txt"):
