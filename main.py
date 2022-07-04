@@ -22,7 +22,8 @@ def main():
                     current_stock = stock
                     print(f"trading hours is on!! stock is: {current_stock}")
                     api=tradeapi.REST(key_id=API_KEY_ID,secret_key=API_SECRET_KEY,api_version="v2",base_url=BASE_URL)
-                    tools.wait_time(300)
+                    tools.wait_time(60)
+                    trading_strategy_1(api,current_stock)
 
                     if not tools.is_trading_hours():
                         break
@@ -50,7 +51,7 @@ def main():
 def trading_strategy_1(api, stock):
     account = api.get_account()
     currently_own_this_stock = tools.currently_own_this_stock(api, stock)
-    api.submit_order(symbol="AMD",qty="1",side="buy",type="market",time_in_force="day")
+    api.submit_order(symbol=stock,qty="1",side="buy",type="market",time_in_force="day")
 
 
 def parse_var(f="keys.txt"):
