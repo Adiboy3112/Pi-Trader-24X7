@@ -67,11 +67,9 @@ I deployed the programme on Raspberry Pi 4 and kept the programme running finall
 <img src="./images/3.png"/>
 </br></br></br></br>
 
-### Reatached from my Mobile Terminux App:
+### Reatached from my Mobile Termux App:
 
-<img src="./images/4.jpeg" width="250" height="450"/>
-</br></br>
-<img src="./images/5.jpeg"/>
+<img src="./images/4.jpeg" width="250" height="450"/><img src="./images/5.jpeg" width="450" height="150"/>
 </br></br>
 
 
