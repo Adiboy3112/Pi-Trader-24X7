@@ -23,7 +23,7 @@ def main():
                     print(f"trading hours is on!! stock is: {current_stock}")
                     api=tradeapi.REST(key_id=API_KEY_ID,secret_key=API_SECRET_KEY,api_version="v2",base_url=BASE_URL)
                     tools.wait_time(60)
-                    trading_strategy_1(api,current_stock)
+                    trading_strategy(api,current_stock)
 
                     if not tools.is_trading_hours():
                         break

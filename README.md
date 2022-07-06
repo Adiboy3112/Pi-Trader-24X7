@@ -27,6 +27,10 @@ In the cloned Repository make newfile `keys.txt` add your API keys in this forma
 
 **NOTE: Don't leave a space after "`=`" sign**
 
+You can change your stocks of interest here in `main.py`:
+
+    stocks_list = ["AAPL", "MSFT","TSLA"]
+
 Now to start add your trading strategy for the day in `main.py`:
 
     def trading_strategy(api, stock):
@@ -50,5 +54,26 @@ Now to again reattach to this session to check status:
 There are many helper functions in tools.py use them according to your need.
 
 ## Deployment Demo
+
+I deployed the programme on Raspberry Pi 4 and kept the programme running finally when it was trading hrs. My orders were placed from my stock list without logging into the workstation 
+
+<img src="./images/1.png"/>
+</br></br>
+<img src="./images/2.png"/>
+</br></br>
+
+### Detached from the session: 
+
+<img src="./images/3.png"/>
+</br></br></br></br>
+
+### Reatached from my Mobile Terminux App:
+
+<img src="./images/4.jpeg" width="250" height="450"/>
+</br></br>
+<img src="./images/5.jpeg"/>
+</br></br>
+
+
 
 
