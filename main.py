@@ -48,10 +48,11 @@ def main():
 
 
 
-def trading_strategy_1(api, stock):
+def trading_strategy(api, stock):
     account = api.get_account()
     currently_own_this_stock = tools.currently_own_this_stock(api, stock)
-    api.submit_order(symbol=stock,qty="1",side="buy",type="market",time_in_force="day")
+    if not currently_own_this_stock:
+        api.submit_order(symbol=stock,qty="1",side="buy",type="market",time_in_force="day")
 
 
 def parse_var(f="keys.txt"):
